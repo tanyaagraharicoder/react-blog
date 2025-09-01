@@ -1,20 +1,24 @@
 import { useState } from "react";
-import User from "./user.jsx";
+
 
 function App() {
-  const [ display, setDisplay]= useState(true);
+  const [count, setCount]= useState(3);
+
   return(
     <div>
-      <h1> Toggele in react js</h1>
-      {/* {
-        display?<h1>Tanya Agrahari</h1>: null
-      } */}
+      <h1>{count} </h1>
+      <button onClick={() => setCount(count+1)}> counter</button>
       {
-        display?<User/>: null
+        count==0? <h1>  condition 0 </h1>
+        :count==1? <h1>condition 1</h1>
+        :count==2? <h1>condition 2</h1>
+        :<h1>other condition </h1>
+        
       }
 
-    <button onClick={()=> setDisplay(!display)} > toggle </button>
     </div>
+    
+  
 
   )
 
