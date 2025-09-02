@@ -1,20 +1,33 @@
-import { useState } from "react";
+import User from "./User";
 
 
 function App() {
-  const [count, setCount]= useState(3);
+  let userObject={
+    name:"Tanya Agrahari",
+    age:29,
+    location:"India",
+    profession:"Software Engineer"
+
+
+  }
+  let userObject2={
+    name:"John Doe",
+    age:32,
+    location:"USA",
+    profession:"Doctor"
+
+  }
+  
+ 
 
   return(
     <div>
-      <h1>{count} </h1>
-      <button onClick={() => setCount(count+1)}> counter</button>
-      {
-        count==0? <h1>  condition 0 </h1>
-        :count==1? <h1>condition 1</h1>
-        :count==2? <h1>condition 2</h1>
-        :<h1>other condition </h1>
-        
-      }
+      <h1>props in react  js </h1>
+      <User user ={userObject}/>
+      <User user={userObject2}/>
+
+      {/* <User   name ="Tanya Agrahri" age ={29} /> */}
+     
 
     </div>
     
